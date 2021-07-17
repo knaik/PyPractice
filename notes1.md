@@ -55,3 +55,37 @@ class graph:
         while temp:
             print(" -> {}".format(temp.val), end="")
             temp = temp.next
+
+
+--------------
+Going back to asymptotoic complexity
+
+upper bounds
+
+we care about the most limiting (smallest) upper bound function
+
+big O gives us a generalized function that reflects the overall growth (mathematically) while 
+allowing us to disregard the smaller terms at a large input size, asymptotically large
+
+works almost like an operator
+
+f(x) = O(f(x))
+    if f(x) = 2x^3 + x^2, O(f(x))= O(2x^3 + x^2) which becomes O(x^3) at very large terms
+
+we throw away constants 
+if the original function can be split into a composition/combination of functions, the dominating function is what becomes the significant bound
+
+we can always over-estimate an upper bound,
+if f(x)= x^3, we can still say this has an upper bound of O(x^4)
+**we care about the most limiting upper bound function
+
+when talking about big O notation, the O(fx(x)) = g(x) does not mean equality, it means bounds
+
+
+comparing algorithms can be based on execution time but then you are testing the underlying architecture as well
+
+comparing the number of statements executed but that does not help because different languages 
+have different levels of abstraction and optimizations
+
+so input size is the most generalized way of comparing complexity, but other signals can be useful based on the complexities of where the algorithm will be used
+
